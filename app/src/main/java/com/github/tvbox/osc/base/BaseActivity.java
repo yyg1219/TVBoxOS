@@ -313,6 +313,7 @@ public abstract class BaseActivity extends AppCompatActivity implements CustomAd
         if (globalWp != null)
             getWindow().setBackgroundDrawable(globalWp);
         else
-            getWindow().setBackgroundDrawableResource(R.drawable.app_bg);
+            // Apple TV 风格: 默认底色改为近黑渐变, 不再使用星空壁纸
+            getWindow().setBackgroundDrawableResource(R.drawable.bg_tv_window);
     }
 }

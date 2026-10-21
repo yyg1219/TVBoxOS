@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Apple TV 风格: 播放进度圆点, 纯白圆点 + 细描边 -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="oval">
             <solid android:color="#FFFFFF" />
             <stroke
-                android:width="2dp"
-                android:color="#FF4081"/>
+                android:width="1dp"
+                android:color="#66000000"/>
             <size
                 android:width="12dp"
                 android:height="12dp"/>

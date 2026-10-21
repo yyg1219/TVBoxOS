@@ -43,7 +43,7 @@
             android:includeFontPadding="false"
             android:maxLines="1"
             android:textAlignment="gravity"
-            android:textColor="@android:color/white"
+            android:textColor="@color/tv_text_secondary"
             android:textSize="@dimen/ts_26"
             tools:text="2026/06/16  周二  15:01" />
     </LinearLayout>

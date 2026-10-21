@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Apple TV 风格: 控件按钮。常态为深色面板, 聚焦/按压时以强调色点亮 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/tv_accent" />
+            <corners android:radius="@dimen/radius_control" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/tv_accent" />
+            <corners android:radius="@dimen/radius_control" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/tv_surface" />
+            <corners android:radius="@dimen/radius_control" />
+            <stroke android:width="0.6dp" android:color="@color/tv_stroke" />
+        </shape>
+    </item>
+</selector>

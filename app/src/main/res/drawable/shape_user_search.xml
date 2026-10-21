@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Apple TV 风格: 直播页搜索面板, 聚焦白描边 + 淡蓝氛围, 常态深灰面板 -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_focused="true" android:state_pressed="true">
         <shape>
             <corners android:radius="10mm" />
-            <solid android:color="@color/color_80FF0057"/>
-        </shape>
-    </item>
-    <item android:state_focused="false" android:state_pressed="true">
-        <shape>
-            <corners android:radius="10mm" />
-            <solid android:color="@color/color_80FF0057"/>
+            <stroke android:width="1.6mm" android:color="@color/tv_stroke_focused" />
+            <solid android:color="@color/tv_accent_dim" />
         </shape>
     </item>
     <item android:state_focused="true">
         <shape>
             <corners android:radius="10mm" />
-            <solid android:color="@color/color_80FF0057"/>
+            <stroke android:width="1.6mm" android:color="@color/tv_stroke_focused" />
+            <solid android:color="@color/tv_accent_dim" />
+        </shape>
+    </item>
+    <item android:state_focused="false" android:state_pressed="true">
+        <shape>
+            <corners android:radius="10mm" />
+            <solid android:color="@color/tv_surface_elevated" />
         </shape>
     </item>
     <item android:state_focused="false" android:state_pressed="false">
         <shape>
             <corners android:radius="10mm" />
-            <solid android:color="@color/color_6C3D3D3D"/>
+            <solid android:color="@color/tv_surface" />
+            <stroke android:width="0.6dp" android:color="@color/tv_stroke" />
         </shape>
     </item>
 </selector>

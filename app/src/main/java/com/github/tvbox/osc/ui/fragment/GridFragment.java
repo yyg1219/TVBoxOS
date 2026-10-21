@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
-import android.view.animation.BounceInterpolator;
+import android.view.animation.DecelerateInterpolator;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -41,13 +41,19 @@ import com.owen.tvrecyclerview.widget.TvRecyclerView;
 import com.owen.tvrecyclerview.widget.V7GridLayoutManager;
 import com.owen.tvrecyclerview.widget.V7LinearLayoutManager;
 
+import androidx.recyclerview.widget.GridLayoutManager;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
+import android.text.TextUtils;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import me.jessyan.autosize.utils.AutoSizeUtils;
 
 import org.greenrobot.eventbus.EventBus;
 import org.json.JSONException;
@@ -77,6 +83,10 @@ public class GridFragment extends BaseLazyFragment {
     private boolean pullRefreshReady = false;
     private int pullRefreshThreshold = 0;
     private View loadSirView = null;
+    private ViewGroup flHero;
+    private ImageView ivHeroBack;
+    private TextView tvHeroTitle;
+    private TextView tvHeroNote;
 
     private static class GridInfo{
         public String sortID="";
@@ -192,6 +202,10 @@ public class GridFragment extends BaseLazyFragment {
         mGridView.setHasFixedSize(true);
         style=ImgUtil.initStyle();
         gridAdapter = new GridAdapter(isFolederMode(), style);
+        if (!isFolederMode()) {
+            // Apple TV 风格: Hero 大图挂到列表头部, 随内容一起滚动
+            attachHeroHeader(gridAdapter);
+        }
         this.page =1;
         this.maxPage =1;
         this.isLoad = false;
@@ -199,7 +213,7 @@ public class GridFragment extends BaseLazyFragment {
 
     private void initView() {
         this.createView();
-        if(isFolederMode()){
+        if (isFolederMode()) {
             mGridView.setLayoutManager(new V7LinearLayoutManager(this.mContext, 1, false));
         }else{
             int spanCount = isBaseOnWidth() ? 5 : 6;
@@ -224,12 +238,12 @@ public class GridFragment extends BaseLazyFragment {
         mGridView.setOnItemListener(new TvRecyclerView.OnItemListener() {
             @Override
             public void onItemPreSelected(TvRecyclerView parent, View itemView, int position) {
-                itemView.animate().scaleX(1.0f).scaleY(1.0f).setDuration(300).setInterpolator(new BounceInterpolator()).start();
+                itemView.animate().scaleX(1.0f).scaleY(1.0f).setDuration(150).setInterpolator(new DecelerateInterpolator()).start();
             }
 
             @Override
             public void onItemSelected(TvRecyclerView parent, View itemView, int position) {
-                itemView.animate().scaleX(1.05f).scaleY(1.05f).setDuration(300).setInterpolator(new BounceInterpolator()).start();
+                itemView.animate().scaleX(1.06f).scaleY(1.06f).setDuration(200).setInterpolator(new DecelerateInterpolator()).start();
             }
 
             @Override
@@ -308,8 +322,59 @@ public class GridFragment extends BaseLazyFragment {
         initPullRefresh();
     }
 
-    private void initPullRefresh() {
-        pullRefreshThreshold = ViewConfiguration.get(mContext).getScaledTouchSlop() * 6;
+    private void attachHeroHeader(GridAdapter adapter) {
+        flHero = (ViewGroup) LayoutInflater.from(mContext).inflate(R.layout.layout_hero, null);
+        ivHeroBack = flHero.findViewById(R.id.ivHeroBack);
+        tvHeroTitle = flHero.findViewById(R.id.tvHeroTitle);
+        tvHeroNote = flHero.findViewById(R.id.tvHeroNote);
+        flHero.setVisibility(View.GONE);
+        adapter.addHeaderView(flHero);
+        adapter.setSpanSizeLookup(new BaseQuickAdapter.SpanSizeLookup() {
+            @Override
+            public int getSpanSize(GridLayoutManager gridLayoutManager, int position) {
+                if (gridAdapter != null && gridAdapter.getItemViewType(position) == BaseQuickAdapter.HEADER_VIEW)
+                    return gridLayoutManager.getSpanCount();
+                return 1;
+            }
+        });
+    }
+
+    // Apple TV 风格: 用当前列表第一项填充 Hero 大图, 无数据时整体隐藏
+    private void updateHero(Movie.Video video) {
+        if (flHero == null) return;
+        if (video == null || TextUtils.isEmpty(video.name)) {
+            flHero.setVisibility(View.GONE);
+            return;
+        }
+        String pic = video.pic == null ? "" : video.pic.trim();
+        if (TextUtils.isEmpty(pic)) {
+            flHero.setVisibility(View.GONE);
+            return;
+        }
+        if (tvHeroTitle != null) tvHeroTitle.setText(video.name);
+        if (tvHeroNote != null) {
+            if (TextUtils.isEmpty(video.note)) {
+                tvHeroNote.setVisibility(View.GONE);
+            } else {
+                tvHeroNote.setVisibility(View.VISIBLE);
+                tvHeroNote.setText(video.note);
+            }
+        }
+        if (ivHeroBack != null) {
+            if (ImgUtil.isBase64Image(pic)) {
+                ivHeroBack.setImageBitmap(ImgUtil.decodeBase64ToBitmap(pic));
+            } else {
+                // 海报按原比例适配(fitCenter), 不再裁切拉伸
+                int rounding = AutoSizeUtils.mm2px(mContext, 15);
+                int w = AutoSizeUtils.mm2px(mContext, 210);
+                int h = AutoSizeUtils.mm2px(mContext, 285);
+                ImgUtil.load(pic, ivHeroBack, rounding, w, h, video.name, ImageView.ScaleType.FIT_CENTER);
+            }
+        }
+        flHero.setVisibility(View.VISIBLE);
+    }
+
+    private void initPullRefresh() {        pullRefreshThreshold = ViewConfiguration.get(mContext).getScaledTouchSlop() * 6;
         mGridView.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
             @Override
             public boolean onInterceptTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent event) {
@@ -397,6 +462,8 @@ public class GridFragment extends BaseLazyFragment {
                         isLoad = true;
                         hasActionItems = hasActionVideo(absXml.movie.videoList);
                         gridAdapter.setNewData(absXml.movie.videoList);
+                        // Apple TV 风格: 首屏数据到达后刷新 Hero 大图(圆角文件夹列表模式不用)
+                        updateHero(isFolederMode() ? null : absXml.movie.videoList.get(0));
                     } else {
                         hasActionItems = hasActionItems || hasActionVideo(absXml.movie.videoList);
                         gridAdapter.addData(absXml.movie.videoList);
@@ -415,7 +482,8 @@ public class GridFragment extends BaseLazyFragment {
                     if (page == 1) {
                         hasActionItems = false;
                         showEmpty();
-                    } else if(page > 2){// 只有一页数据时不提示
+                        updateHero(null);
+                    } else if (page > 2) {// 只有一页数据时不提示
                         Toast.makeText(getContext(), "没有更多了", Toast.LENGTH_SHORT).show();
                     }
                     gridAdapter.loadMoreEnd();

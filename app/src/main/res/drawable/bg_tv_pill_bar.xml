@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Apple TV 风格: 顶栏胶囊按钮 (用于用户页入口, 高度 vs_90, 全圆角) -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape>
+            <corners android:radius="45mm" />
+            <solid android:color="@color/tv_accent_dim" />
+            <stroke android:width="1.6mm" android:color="@color/tv_stroke_focused" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:radius="45mm" />
+            <solid android:color="@color/tv_surface_elevated" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <corners android:radius="45mm" />
+            <solid android:color="@color/tv_surface" />
+            <stroke android:width="0.6dp" android:color="@color/tv_stroke" />
+        </shape>
+    </item>
+</selector>

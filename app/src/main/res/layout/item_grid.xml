@@ -108,8 +108,9 @@
                 android:padding="@dimen/vs_5"
                 android:singleLine="true"
                 android:text="Title"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/ts_22" />
+                android:textColor="@color/tv_text_primary"
+                android:textSize="@dimen/ts_22"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvActor"

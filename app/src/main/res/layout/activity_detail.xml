@@ -57,10 +57,10 @@
                     android:layout_marginBottom="@dimen/vs_5"
                     android:focusable="false"
                     android:ellipsize="end"
-                    android:maxLines="1"
-                    android:singleLine="true"
-                    android:textColor="@android:color/white"
-                    android:textSize="@dimen/ts_28" />
+                    android:maxLines="2"
+                    android:textColor="@color/tv_text_primary"
+                    android:textSize="@dimen/ts_40"
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -174,8 +174,8 @@
                     android:focusable="false"
                     android:ellipsize="end"
                     android:lineSpacingMultiplier="1.2"
-                    android:maxLines="3"
-                    android:textColor="@color/color_CCFFFFFF"
+                    android:maxLines="2"
+                    android:textColor="@color/tv_text_secondary"
                     android:textSize="@dimen/ts_20" />
 
                 <Space
@@ -200,7 +200,7 @@
                         android:gravity="center"
                         android:text="立即播放"
                         android:textColor="@android:color/white"
-                        android:textSize="@dimen/vs_20" />
+                        android:textSize="@dimen/ts_24" />
 
                     <TextView
                         android:id="@+id/tvQuickSearch"
@@ -213,7 +213,7 @@
                         android:gravity="center"
                         android:text="快速搜索"
                         android:textColor="@android:color/white"
-                        android:textSize="@dimen/vs_20" />
+                        android:textSize="@dimen/ts_24" />
 
                     <TextView
                         android:id="@+id/tvDesc"
@@ -226,7 +226,7 @@
                         android:gravity="center"
                         android:text="简介"
                         android:textColor="@android:color/white"
-                        android:textSize="@dimen/vs_20" />
+                        android:textSize="@dimen/ts_24" />
 
                     <TextView
                         android:id="@+id/tvCollect"
@@ -239,7 +239,7 @@
                         android:gravity="center"
                         android:text="加入收藏"
                         android:textColor="@android:color/white"
-                        android:textSize="@dimen/vs_20" />
+                        android:textSize="@dimen/ts_24" />
 
                     <TextView
                         android:id="@+id/tvChangeSource"
@@ -250,7 +250,7 @@
                         android:gravity="center"
                         android:text="切源"
                         android:textColor="@android:color/white"
-                        android:textSize="@dimen/vs_20" />
+                        android:textSize="@dimen/ts_24" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

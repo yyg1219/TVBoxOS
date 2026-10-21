@@ -4,7 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.BounceInterpolator;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -254,12 +254,12 @@ public class UserFragment extends BaseLazyFragment implements View.OnClickListen
         tvHotList.setOnItemListener(new TvRecyclerView.OnItemListener() {
             @Override
             public void onItemPreSelected(TvRecyclerView parent, View itemView, int position) {
-                itemView.animate().scaleX(1.0f).scaleY(1.0f).setDuration(300).setInterpolator(new BounceInterpolator()).start();
+                itemView.animate().scaleX(1.0f).scaleY(1.0f).setDuration(150).setInterpolator(new DecelerateInterpolator()).start();
             }
 
             @Override
             public void onItemSelected(TvRecyclerView parent, View itemView, int position) {
-                itemView.animate().scaleX(1.05f).scaleY(1.05f).setDuration(300).setInterpolator(new BounceInterpolator()).start();
+                itemView.animate().scaleX(1.06f).scaleY(1.06f).setDuration(200).setInterpolator(new DecelerateInterpolator()).start();
             }
 
             @Override
@@ -366,9 +366,9 @@ public class UserFragment extends BaseLazyFragment implements View.OnClickListen
         @Override
         public void onFocusChange(View v, boolean hasFocus) {
             if (hasFocus)
-                v.animate().scaleX(1.05f).scaleY(1.05f).setDuration(300).setInterpolator(new BounceInterpolator()).start();
+                v.animate().scaleX(1.06f).scaleY(1.06f).setDuration(200).setInterpolator(new DecelerateInterpolator()).start();
             else
-                v.animate().scaleX(1.0f).scaleY(1.0f).setDuration(300).setInterpolator(new BounceInterpolator()).start();
+                v.animate().scaleX(1.0f).scaleY(1.0f).setDuration(150).setInterpolator(new DecelerateInterpolator()).start();
         }
     };
 

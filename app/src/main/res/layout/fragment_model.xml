@@ -63,8 +63,8 @@
                         android:layout_marginStart="@dimen/vs_10"
                         android:layout_marginLeft="@dimen/vs_10"
                         android:text=">"
-                        android:textColor="@android:color/white"
-                        android:textSize="@dimen/ts_30" />
+                        android:textColor="@color/tv_text_disabled"
+                        android:textSize="@dimen/ts_24" />
             </LinearLayout>
 
             <LinearLayout
@@ -113,9 +113,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/llApiRightGroup"
@@ -166,8 +166,8 @@
                         android:layout_marginStart="@dimen/vs_10"
                         android:layout_marginLeft="@dimen/vs_10"
                         android:text=">"
-                        android:textColor="@android:color/white"
-                        android:textSize="@dimen/ts_30" />
+                        android:textColor="@color/tv_text_disabled"
+                        android:textSize="@dimen/ts_24" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -213,8 +213,8 @@
                         android:layout_marginStart="@dimen/vs_10"
                         android:layout_marginLeft="@dimen/vs_10"
                         android:text=">"
-                        android:textColor="@android:color/white"
-                        android:textSize="@dimen/ts_30" />
+                        android:textColor="@color/tv_text_disabled"
+                        android:textSize="@dimen/ts_24" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -265,9 +265,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/tvHomeLive"
@@ -309,8 +309,8 @@
                         android:layout_marginStart="@dimen/vs_10"
                         android:layout_marginLeft="@dimen/vs_10"
                         android:text=">"
-                        android:textColor="@android:color/white"
-                        android:textSize="@dimen/ts_30" />
+                        android:textColor="@color/tv_text_disabled"
+                        android:textSize="@dimen/ts_24" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -368,9 +368,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -411,9 +411,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -465,9 +465,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -508,9 +508,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -560,9 +560,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -612,9 +612,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -655,9 +655,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -709,8 +709,8 @@
                         android:layout_marginStart="@dimen/vs_10"
                         android:layout_marginLeft="@dimen/vs_10"
                         android:text=">"
-                        android:textColor="@android:color/white"
-                        android:textSize="@dimen/ts_30" />
+                        android:textColor="@color/tv_text_disabled"
+                        android:textSize="@dimen/ts_24" />
 
                 </LinearLayout>
 
@@ -756,8 +756,8 @@
                         android:layout_marginStart="@dimen/vs_10"
                         android:layout_marginLeft="@dimen/vs_10"
                         android:text=">"
-                        android:textColor="@android:color/white"
-                        android:textSize="@dimen/ts_30" />
+                        android:textColor="@color/tv_text_disabled"
+                        android:textSize="@dimen/ts_24" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -807,9 +807,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -859,9 +859,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -902,9 +902,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -957,9 +957,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                 </LinearLayout>
 
 
@@ -1010,9 +1010,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                     </LinearLayout>
                     <LinearLayout
                         android:id="@+id/llHistoryNum"
@@ -1052,9 +1052,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -1108,9 +1108,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -1144,9 +1144,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -1197,9 +1197,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -1240,9 +1240,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -1305,9 +1305,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                     </LinearLayout>
 
 
@@ -1342,9 +1342,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -1390,9 +1390,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -1426,9 +1426,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text=">"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/ts_30" />
+                        android:text=">"
+                            android:textColor="@color/tv_text_disabled"
+                            android:textSize="@dimen/ts_24" />
                     </LinearLayout>
                 </LinearLayout>
 

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Apple TV 风格: 海报卡片底色, 焦点时不填充 (焦点由外层 selector/缩放表现) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/tv_surface" />
+    <corners android:radius="@dimen/radius_card" />
+    <stroke android:width="0.6dp" android:color="@color/tv_stroke" />
+</shape>

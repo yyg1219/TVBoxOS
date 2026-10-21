@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Apple TV 风格: 备注标签同样为半透明黑 chip -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/color_3D3D3D" />
+    <solid android:color="#66000000" />
     <corners android:radius="5mm" />
 </shape>

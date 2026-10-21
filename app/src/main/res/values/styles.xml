@@ -2,9 +2,21 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/color_6200EE</item>
-        <item name="colorPrimaryDark">@color/color_3700B3</item>
-        <item name="colorAccent">@color/color_03DAC5</item>
+        <item name="colorPrimary">@color/tv_bg</item>
+        <item name="colorPrimaryDark">@color/tv_bg</item>
+        <item name="colorAccent">@color/tv_accent</item>
+    </style>
+
+    <!-- Apple TV 风格文字体系 -->
+    <style name="TvHeading" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/tv_text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TvBody" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/tv_text_secondary</item>
+    </style>
+    <style name="TvCaption" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/tv_text_disabled</item>
     </style>
 
     <style name="AppTheme.NoActionBar" parent="AppTheme">

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Apple TV 风格: 播放进度条, 灰轨道 + 白色进度 (不再使用粉色) -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- 背景轨道 -->
     <item android:id="@android:id/background">
         <shape android:shape="rectangle">
-            <solid android:color="#4DFFFFFF" />
+            <solid android:color="#33FFFFFF" />
             <corners android:radius="2dp"/>
             <size android:height="3dp"/>
         </shape>
@@ -12,7 +13,7 @@
     <item android:id="@android:id/secondaryProgress">
         <clip>
             <shape android:shape="rectangle">
-                <solid android:color="#66FFFFFF" />
+                <solid android:color="#4DFFFFFF" />
                 <corners android:radius="2dp"/>
                 <size android:height="3dp"/>
             </shape>
@@ -22,7 +23,7 @@
     <item android:id="@android:id/progress">
         <clip>
             <shape android:shape="rectangle">
-                <solid android:color="#FF4081" />
+                <solid android:color="#FFFFFF" />
                 <corners android:radius="2dp"/>
                 <size android:height="3dp"/>
             </shape>

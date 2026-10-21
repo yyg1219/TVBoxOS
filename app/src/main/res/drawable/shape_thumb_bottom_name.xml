@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- Apple TV 风格: 底部名称条改为渐变压暗, 信息更"浮"在海报上而非色块 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
     <corners
         android:bottomLeftRadius="@dimen/vs_10"
         android:bottomRightRadius="@dimen/vs_10" />
-    <solid android:color="@color/color_99000000" />
+    <gradient
+        android:angle="270"
+        android:startColor="@android:color/transparent"
+        android:endColor="#E6000000" />
 </shape>
